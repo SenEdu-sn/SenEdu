@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Jetons de la charte SenEdu.
+   Chaque --color-x crée les classes text-x, bg-x, border-x. */
+@theme {
+  --color-encre: #13251c;
+  --color-encre-douce: #2e4238;
+  --color-gris: #4a5c52;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-vert: #17533f;
+  --color-vert-sombre: #0c3627;
+  --color-vert-pale: #e8f0eb;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-violet: #6a4c93;
+  --color-violet-sombre: #4f3670;
+  --color-violet-pale: #f0eaf6;
+
+  --color-trait: #dce3de;
+  --color-papier: #f5f8f6;
+
+  --font-serif: var(--font-literata), Georgia, serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-encre);
+  font-family: var(--font-sans);
 }
